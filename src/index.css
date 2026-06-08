@@ -1,0 +1,84 @@
+/* ============================================================
+   ElectroSim – Global Stylesheet
+   Tailwind v4 | Class-based dark mode | Custom tokens
+   ============================================================ */
+
+@import "tailwindcss";
+
+/* ── Enable CLASS-based dark mode (not media query) ─────────
+   This is the fix for dark/light mode not working in Tailwind v4.
+   Without this, dark: utilities respond to OS preference only.   */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ── Design Tokens ──────────────────────────────────────────── */
+@theme {
+  /* Dark palette */
+  --color-engDark-bg:     #0F172A;   /* slate-900 */
+  --color-engDark-card:   #1E293B;   /* slate-800 */
+  --color-engDark-border: #334155;   /* slate-700 */
+  --color-engDark-text:   #F8FAFC;   /* slate-50  */
+  --color-engDark-muted:  #94A3B8;   /* slate-400 */
+
+  /* Light palette */
+  --color-engLight-bg:     #F8FAFC;  /* slate-50  */
+  --color-engLight-card:   #FFFFFF;
+  --color-engLight-border: #E2E8F0;  /* slate-200 */
+  --color-engLight-text:   #0F172A;  /* slate-900 */
+  --color-engLight-muted:  #64748B;  /* slate-500 */
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+/* ── Base ───────────────────────────────────────────────────── */
+html, body {
+  height: 100%;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  font-family: var(--font-sans);
+}
+
+/* ── Custom Utilities ───────────────────────────────────────── */
+@utility grid-bg-light {
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, rgba(226, 232, 240, 0.6) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(226, 232, 240, 0.6) 1px, transparent 1px);
+}
+
+@utility grid-bg-dark {
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, rgba(51, 65, 85, 0.18) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(51, 65, 85, 0.18) 1px, transparent 1px);
+}
+
+@utility animate-pulse-cyan {
+  animation: pulse-cyan 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* ── Custom Scrollbars ──────────────────────────────────────── */
+::-webkit-scrollbar        { width: 6px; height: 6px; }
+::-webkit-scrollbar-track  { background: transparent; }
+::-webkit-scrollbar-thumb  { border-radius: 9999px; background: #CBD5E1; }
+.dark ::-webkit-scrollbar-thumb { background: #475569; }
+::-webkit-scrollbar-thumb:hover  { background: #94A3B8; }
+.dark ::-webkit-scrollbar-thumb:hover { background: #64748B; }
+
+/* ── Keyframes ──────────────────────────────────────────────── */
+@keyframes pulse-cyan {
+  0%, 100% { opacity: 1;  box-shadow: 0 0 15px rgba(6, 182, 212, 0.6); }
+  50%       { opacity: .8; box-shadow: 0 0 5px  rgba(6, 182, 212, 0.2); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0);   }
+}
+
+@keyframes slideRight {
+  from { opacity: 0; transform: translateX(-10px); }
+  to   { opacity: 1; transform: translateX(0);    }
+}
+
+@utility animate-fadeIn   { animation: fadeIn    0.25s ease forwards; }
+@utility animate-slideRight { animation: slideRight 0.25s ease forwards; }

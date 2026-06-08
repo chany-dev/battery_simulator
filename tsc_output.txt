@@ -1,0 +1,40 @@
+src/components/PlotDashboard.tsx(63,5): error TS2322: Type 'number[] | number[][]' is not assignable to type 'number[] | undefined'.
+  Type 'number[][]' is not assignable to type 'number[]'.
+    Type 'number[]' is not assignable to type 'number'.
+src/components/PlotDashboard.tsx(87,26): error TS2322: Type 'number[] | number[][]' is not assignable to type 'number[]'.
+  Type 'number[][]' is not assignable to type 'number[]'.
+    Type 'number[]' is not assignable to type 'number'.
+src/components/PlotDashboard.tsx(105,26): error TS2322: Type 'number[] | number[][]' is not assignable to type 'number[]'.
+  Type 'number[][]' is not assignable to type 'number[]'.
+    Type 'number[]' is not assignable to type 'number'.
+src/components/PlotDashboard.tsx(150,15): error TS2322: Type '({ xData: number[] | number[][]; yData: number[]; name: string; color: string; } | { xData: number[] | number[][]; yData: number[]; name: string; color: string; yAxis: string; })[]' is not assignable to type 'TraceData[]'.
+  Type '{ xData: number[] | number[][]; yData: number[]; name: string; color: string; } | { xData: number[] | number[][]; yData: number[]; name: string; color: string; yAxis: string; }' is not assignable to type 'TraceData'.
+    Type '{ xData: number[] | number[][]; yData: number[]; name: string; color: string; }' is not assignable to type 'TraceData'.
+      Types of property 'xData' are incompatible.
+        Type 'number[] | number[][]' is not assignable to type 'number[]'.
+          Type 'number[][]' is not assignable to type 'number[]'.
+            Type 'number[]' is not assignable to type 'number'.
+src/components/plots/BatteryCellAnimation.tsx(5,23): error TS6133: 'FastForward' is declared but its value is never read.
+src/components/plots/BatteryCellAnimation.tsx(83,11): error TS6133: 'height' is declared but its value is never read.
+src/components/plots/BatteryCellAnimation.tsx(158,85): error TS6133: 'count' is declared but its value is never read.
+src/components/plots/ParticleConcentrationPlot.tsx(49,27): error TS6133: 'N' is declared but its value is never read.
+src/components/plots/ParticleConcentrationPlot.tsx(605,68): error TS6133: 'label' is declared but its value is never read.
+src/components/plots/PlotDashboard.tsx(66,24): error TS2322: Type 'number[] | number[][]' is not assignable to type 'number[]'.
+  Type 'number[][]' is not assignable to type 'number[]'.
+    Type 'number[]' is not assignable to type 'number'.
+src/components/plots/PlotDashboard.tsx(80,24): error TS2322: Type 'number[] | number[][]' is not assignable to type 'number[]'.
+  Type 'number[][]' is not assignable to type 'number[]'.
+    Type 'number[]' is not assignable to type 'number'.
+src/components/plots/PlotDashboard.tsx(114,15): error TS2322: Type '{ xData: number[] | number[][]; yData: number[][]; name: string; color: string; }[]' is not assignable to type 'Trace2D[]'.
+  Type '{ xData: number[] | number[][]; yData: number[][]; name: string; color: string; }' is not assignable to type 'Trace2D'.
+    Types of property 'xData' are incompatible.
+      Type 'number[] | number[][]' is not assignable to type 'number[]'.
+        Type 'number[][]' is not assignable to type 'number[]'.
+          Type 'number[]' is not assignable to type 'number'.
+src/components/plots/PlotDashboard.tsx(146,13): error TS2322: Type '{ xData: number[] | number[][]; yData: number[] | number[][]; name: string; color: string; }[]' is not assignable to type 'TraceData[]'.
+  Type '{ xData: number[] | number[][]; yData: number[] | number[][]; name: string; color: string; }' is not assignable to type 'TraceData'.
+    Types of property 'xData' are incompatible.
+      Type 'number[] | number[][]' is not assignable to type 'number[]'.
+        Type 'number[][]' is not assignable to type 'number[]'.
+          Type 'number[]' is not assignable to type 'number'.
+src/components/plots/ScientificPlot.tsx(98,11): error TS6133: 'series' is declared but its value is never read.
