@@ -44,8 +44,7 @@ export const PlotDashboard: React.FC = () => {
     ? rightActiveTab : (activeCats[1]?.id ?? activeCats[0]?.id ?? '');
 
   /* ── helpers ─────────────────────────────────────────────── */
-  const getPlotData = (varName: string) =>
-    results && selectedVariables.includes(varName) ? results[varName] : undefined;
+
 
   const getXAxis = (len: number) =>
     hasTime && timeData
